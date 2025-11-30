@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Layout from "../components/layout/Layout";
 
 export const metadata = {
   title: "My Blog",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
