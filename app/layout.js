@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Layout>{children}</Layout>
+        <div id="notifications"></div>
       </body>
     </html>
   );
