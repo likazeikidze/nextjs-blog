@@ -4,6 +4,8 @@ import Layout from "../components/layout/Layout";
 export const metadata = {
   title: "My Blog",
   description: "A modern Next.js blog project",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
