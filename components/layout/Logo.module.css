@@ -3,7 +3,13 @@
   font-size: var(--size-5);
   font-weight: bold;
   font-family: "Oswald", sans-serif;
-  color: var(--color-grey-50);
+  color: hsl(220, 20%, 85%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 @media (min-width: 768px) {

@@ -1,21 +1,32 @@
 .hero {
   text-align: center;
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-grey-900),
-    var(--color-grey-800)
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-hero-start),
+    var(--color-bg-hero-end)
   );
-  padding: var(--size-8) 0;
+  padding: clamp(6rem, 12vh, 10rem) 0;
+  color: hsl(0, 0%, 95%);
+  position: relative;
 }
 
 .image {
   width: 300px;
   height: 300px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: var(--color-grey-700);
   margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  background-color: hsl(220, 15%, 14%);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .image img {
@@ -28,13 +39,31 @@
 .hero h1 {
   font-size: var(--size-16);
   margin: var(--size-4) 0;
-  color: var(--color-grey-300);
+  color: var(--color-heading);
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .hero p {
   font-size: var(--size-6);
-  color: var(--color-grey-200);
+  color: hsl(220, 15%, 75%);
   width: 90%;
   max-width: 40rem;
   margin: auto;
+  line-height: 1.6;
+
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* fade-in & slide-up */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
