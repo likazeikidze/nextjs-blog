@@ -4,6 +4,9 @@ import Layout from "../components/layout/Layout";
 export const metadata = {
   title: "My Blog",
   description: "A modern Next.js blog project",
+};
+
+export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
